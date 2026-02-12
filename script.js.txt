@@ -1,0 +1,28 @@
+const carros = [
+    {nome: "Mercedes Classe S", img: "https://source.unsplash.com/400x300/?mercedes-s-class"},
+    {nome: "BMW Série 7", img: "https://source.unsplash.com/400x300/?bmw-7-series"},
+    {nome: "Audi A8", img: "https://source.unsplash.com/400x300/?audi-a8"},
+    {nome: "Tesla Model S", img: "https://source.unsplash.com/400x300/?tesla-model-s"},
+    {nome: "Porsche Panamera", img: "https://source.unsplash.com/400x300/?porsche-panamera"},
+    {nome: "Lexus ES", img: "https://source.unsplash.com/400x300/?lexus-es"},
+    {nome: "Toyota Corolla", img: "https://source.unsplash.com/400x300/?toyota-corolla"},
+    {nome: "Honda Accord", img: "https://source.unsplash.com/400x300/?honda-accord"},
+    {nome: "Range Rover", img: "https://source.unsplash.com/400x300/?range-rover"},
+    {nome: "Ford Mustang", img: "https://source.unsplash.com/400x300/?ford-mustang"}
+];
+
+const container = document.querySelector(".container");
+
+carros.forEach(carro => {
+    container.innerHTML += `
+        <div class="card">
+            <img src="${carro.img}" alt="${carro.nome}">
+            <h3>${carro.nome}</h3>
+            <p>Transmissão automática avançada, conforto e alto desempenho.</p>
+        </div>
+    `;
+});
+
+function toggleModo() {
+    document.body.classList.toggle("light-mode");
+}

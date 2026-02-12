@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Carros Automáticos do Mundo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🚗 Top 10 Carros Automáticos do Mundo</h1>
+    <nav>
+        <a href="#carros">Carros</a>
+        <a href="#sobre">Sobre</a>
+        <button onclick="toggleModo()">🌙</button>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Os melhores carros automáticos do planeta</h2>
+    <p>Luxo, tecnologia, conforto e desempenho.</p>
+</section>
+
+<section id="carros" class="container">
+</section>
+
+<section id="sobre" class="sobre">
+    <h2>Sobre o Site</h2>
+    <p>Este site apresenta os 10 melhores carros automáticos do mundo com base em luxo, tecnologia e desempenho.</p>
+</section>
+
+<footer>
+    <p>© 2026 - Desenvolvido por Você</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
