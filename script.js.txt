@@ -40,4 +40,28 @@ const carros = [
     {nome: "Ferrari SF90", img: "https://source.unsplash.com/400x300/?ferrari-sf90"},   // Novo carro 1
     {nome: "Lamborghini Aventador", img: "https://source.unsplash.com/400x300/?lamborghini-aventador"} // Novo carro 2
 ];
+const container = document.querySelector(".container");
+
+carros.forEach(carro => {
+    container.innerHTML += `
+        <div class="card">
+            <img src="${carro.img}" alt="${carro.nome}">
+            <h3>${carro.nome}</h3>
+            <p>Transmissão automática avançada, conforto e alto desempenho.</p>
+        </div>
+    `;
+});
+function entrar() {
+    let nome = prompt("Digite seu nome para entrar:");
+    if(nome) {
+        alert(`Bem-vindo, ${nome}!`);
+    }
+}
+
+function sair() {
+    alert("Você saiu do site!");
+    // Opcional: redirecionar para outra página
+    // window.location.href = "https://www.google.com";
+}
+
 
