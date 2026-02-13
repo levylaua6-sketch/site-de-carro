@@ -1,62 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carros Automáticos Premium</title>
 
-    </style>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+/* MENU */
+header {
+    background: #000;
+    padding: 15px;
+}
+
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav { background: #00c3ff; color: black; }
+.voltar { background: #4CAF50; color: white; }
+.sair { background: #f44336; color: white; }
+
+/* SEÇÕES */
+section {
+    display: none;
+    padding: 30px;
+}
+
+.active {
+    display: block;
+}
+
+/* CARDS */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #1c1c1c;
+    padding: 15px;
+    border-radius: 10px;
+}
+.card h3 {
+    color: #00c3ff;
+}
+.preco {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 10px;
+}
+</style>
 </head>
 
 <body>
 
-    <h1>Minha Loja de Carros 🚗🔥</h1>
+<header>
+    <button class="nav" onclick="mostrarInicio()">Início</button>
+    <button class="nav" onclick="mostrarCarros()">Carros</button>
+    <button class="voltar" onclick="voltar()">Voltar</button>
+    <button class="sair" onclick="sair()">Sair</button>
+</header>
 
-    <div class="carros">
+<!-- PÁGINA INICIAL -->
+<section id="inicio" class="active">
+    <h1>🚗 Bem-vindo ao Mundo dos Carros Automáticos</h1>
+    <p>
+        Este site apresenta os melhores carros automáticos do mundo.
+        Aqui você encontra informações, descrições e preços atualizados
+        dos modelos mais luxuosos e tecnológicos do mercado.
+    </p>
+</section>
+
+<!-- PÁGINA DE CARROS -->
+<section id="carros">
+    <h2>🏆 Lista dos Melhores Carros</h2>
+
+    <div class="container">
 
         <div class="card">
-            <img src="carro1.jpg">
-            <h3>BMW M4</h3>
-            <p class="preco">R$ 450.000</p>
-            <button>Comprar</button>
+            <h3>Mercedes Classe S</h3>
+            <p>Luxo extremo, conforto premium e tecnologia avançada.</p>
+            <div class="preco">Preço: €120.000</div>
         </div>
 
         <div class="card">
-            <img src="carro2.jpg">
-            <h3>Mustang GT</h3>
-            <p class="preco">R$ 380.000</p>
-            <button>Comprar</button>
+            <h3>BMW Série 7</h3>
+            <p>Design elegante e sistema automático inteligente.</p>
+            <div class="preco">Preço: €110.000</div>
         </div>
 
         <div class="card">
-            <img src="carro3.jpg">
-            <h3>Lamborghini Huracán</h3>
-            <p class="preco">R$ 2.500.000</p>
-            <button>Comprar</button>
+            <h3>Audi A8</h3>
+            <p>Alta performance e conforto executivo.</p>
+            <div class="preco">Preço: €105.000</div>
+        </div>
+
+        <div class="card">
+            <h3>Tesla Model S</h3>
+            <p>Elétrico, rápido e tecnologia futurista.</p>
+            <div class="preco">Preço: €95.000</div>
+        </div>
+
+        <div class="card">
+            <h3>Porsche Panamera</h3>
+            <p>Esportivo de luxo com transmissão automática PDK.</p>
+            <div class="preco">Preço: €130.000</div>
+        </div>
+
+        <div class="card">
+            <h3>Lexus ES</h3>
+            <p>Confiabilidade japonesa e extremo conforto.</p>
+            <div class="preco">Preço: €70.000</div>
+        </div>
+
+        <div class="card">
+            <h3>Range Rover</h3>
+            <p>Luxo off-road com potência impressionante.</p>
+            <div class="preco">Preço: €140.000</div>
+        </div>
+
+        <div class="card">
+            <h3>Ford Mustang Automático</h3>
+            <p>Esportivo icônico com câmbio de 10 marchas.</p>
+            <div class="preco">Preço: €65.000</div>
         </div>
 
     </div>
+</section>
+
+<script>
+let paginaAtual = "inicio";
+
+function mostrarInicio() {
+    document.getElementById("inicio").classList.add("active");
+    document.getElementById("carros").classList.remove("active");
+    paginaAtual = "inicio";
+}
+
+function mostrarCarros() {
+    document.getElementById("carros").classList.add("active");
+    document.getElementById("inicio").classList.remove("active");
+    paginaAtual = "carros";
+}
+
+function voltar() {
+    if(paginaAtual === "carros") {
+        mostrarInicio();
+    }
+}
+
+function sair() {
+    alert("Você saiu do site!");
+    mostrarInicio();
+}
+</script>
 
 </body>
 </html>
-<header>
-  <div class="logo">🚗 Carros Automáticos</div>
-  <nav>
-    <ul>
-      <li><a href="#carros">Carros</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
-  <button onclick="toggleModo()">🌙</button>
-</header>
-<header>
-  <div class="logo">🚗 Carros Automáticos</div>
-  <nav>
-    <ul>
-      <li><a href="#carros">Carros</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#contato">Contato</a></li>
-      <li><button class="entrar" onclick="entrar()">Entrar</button></li>
-      <li><button class="sair" onclick="sair()">Sair</button></li>
-    </ul>
-  </nav>
-  <button onclick="toggleModo()">🌙</button>
-</header>
+
+
+
 
 
 
