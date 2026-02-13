@@ -49,3 +49,22 @@ body {
 html {
     scroll-behavior: smooth;
 }
+nav ul li button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav ul li button.sair {
+    background-color: #f44336;
+}
+
+nav ul li button:hover {
+    opacity: 0.8;
+}
+
